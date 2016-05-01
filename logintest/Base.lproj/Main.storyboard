@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="logintest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,111 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2G-XV-SDc" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="6ZZ-TF-Bhk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6ZZ-TF-Bhk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" layoutMarginsFollowReadableWidth="YES"/>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6ZZ-TF-Bhk"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-Ri-mUg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" layoutMarginsFollowReadableWidth="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j20-YL-xcG">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="S1U-hu-eqU"/>
+                                    <constraint firstAttribute="width" constant="42" id="v6z-TA-2vf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="S1U-hu-eqU"/>
+                                        <exclude reference="v6z-TA-2vf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" layoutMarginsFollowReadableWidth="YES"/>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="S1U-hu-eqU"/>
+                                        <include reference="v6z-TA-2vf"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g2G-XV-SDc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Bmg-qw-nO6"/>
+                            <constraint firstItem="g2G-XV-SDc" firstAttribute="trailing" secondItem="QaJ-Ri-mUg" secondAttribute="trailing" id="JT2-iS-0Fw"/>
+                            <constraint firstItem="g2G-XV-SDc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SSz-Fb-Lvk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j20-YL-xcG" secondAttribute="bottom" constant="166" id="WEl-7O-ojT"/>
+                            <constraint firstItem="QaJ-Ri-mUg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WhZ-H7-ZgC"/>
+                            <constraint firstItem="QaJ-Ri-mUg" firstAttribute="centerX" secondItem="j20-YL-xcG" secondAttribute="centerX" id="ZSE-ms-ryn"/>
+                            <constraint firstItem="QaJ-Ri-mUg" firstAttribute="top" secondItem="g2G-XV-SDc" secondAttribute="bottom" constant="8" symbolic="YES" id="cYK-45-vLn"/>
+                            <constraint firstItem="g2G-XV-SDc" firstAttribute="leading" secondItem="QaJ-Ri-mUg" secondAttribute="leading" id="gnm-yY-oU7"/>
+                            <constraint firstItem="j20-YL-xcG" firstAttribute="top" secondItem="QaJ-Ri-mUg" secondAttribute="bottom" constant="8" symbolic="YES" id="res-SO-gBo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="g2G-XV-SDc"/>
+                                <exclude reference="QaJ-Ri-mUg"/>
+                                <exclude reference="j20-YL-xcG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Bmg-qw-nO6"/>
+                                <exclude reference="JT2-iS-0Fw"/>
+                                <exclude reference="SSz-Fb-Lvk"/>
+                                <exclude reference="gnm-yY-oU7"/>
+                                <exclude reference="WhZ-H7-ZgC"/>
+                                <exclude reference="ZSE-ms-ryn"/>
+                                <exclude reference="cYK-45-vLn"/>
+                                <exclude reference="res-SO-gBo"/>
+                                <exclude reference="WEl-7O-ojT"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="g2G-XV-SDc"/>
+                                <include reference="QaJ-Ri-mUg"/>
+                                <include reference="j20-YL-xcG"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Bmg-qw-nO6"/>
+                                <include reference="JT2-iS-0Fw"/>
+                                <include reference="SSz-Fb-Lvk"/>
+                                <include reference="gnm-yY-oU7"/>
+                                <include reference="WhZ-H7-ZgC"/>
+                                <include reference="ZSE-ms-ryn"/>
+                                <include reference="cYK-45-vLn"/>
+                                <include reference="res-SO-gBo"/>
+                                <include reference="WEl-7O-ojT"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnFacebook" destination="g2G-XV-SDc" id="CBU-1d-EVg"/>
+                        <outlet property="ivUserProfile" destination="QaJ-Ri-mUg" id="fOd-I6-wGP"/>
+                        <outlet property="lblUserName" destination="j20-YL-xcG" id="g9A-Ak-iqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="288" y="289"/>
         </scene>
     </scenes>
 </document>

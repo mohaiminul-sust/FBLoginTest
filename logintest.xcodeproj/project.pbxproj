@@ -12,6 +12,8 @@
 		C433CF011CD6103A00B9188C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C433CEFF1CD6103A00B9188C /* Main.storyboard */; };
 		C433CF031CD6103A00B9188C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C433CF021CD6103A00B9188C /* Assets.xcassets */; };
 		C433CF061CD6103A00B9188C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C433CF041CD6103A00B9188C /* LaunchScreen.storyboard */; };
+		C433CF0F1CD6110D00B9188C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C433CF0D1CD6110D00B9188C /* FBSDKCoreKit.framework */; };
+		C433CF101CD6110D00B9188C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C433CF0E1CD6110D00B9188C /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		C433CF021CD6103A00B9188C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C433CF051CD6103A00B9188C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C433CF071CD6103A00B9188C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C433CF0D1CD6110D00B9188C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		C433CF0E1CD6110D00B9188C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C433CF111CD612D400B9188C /* logintest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "logintest-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C433CF101CD6110D00B9188C /* FBSDKLoginKit.framework in Frameworks */,
+				C433CF0F1CD6110D00B9188C /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				C433CEFA1CD6103A00B9188C /* logintest */,
 				C433CEF91CD6103A00B9188C /* Products */,
+				C433CF111CD612D400B9188C /* logintest-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +62,8 @@
 		C433CEFA1CD6103A00B9188C /* logintest */ = {
 			isa = PBXGroup;
 			children = (
+				C433CF0D1CD6110D00B9188C /* FBSDKCoreKit.framework */,
+				C433CF0E1CD6110D00B9188C /* FBSDKLoginKit.framework */,
 				C433CEFB1CD6103A00B9188C /* AppDelegate.swift */,
 				C433CEFD1CD6103A00B9188C /* ViewController.swift */,
 				C433CEFF1CD6103A00B9188C /* Main.storyboard */,
@@ -249,10 +259,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = logintest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infancyit.logintest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "logintest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +277,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = logintest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infancyit.logintest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "logintest-Bridging-Header.h";
 			};
 			name = Release;
 		};
