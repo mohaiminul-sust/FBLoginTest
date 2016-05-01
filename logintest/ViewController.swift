@@ -16,18 +16,20 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         self.configureFacebook()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func configureFacebook(){
         btnFacebook.readPermissions = ["public_profile", "email", "user_friends"]
         btnFacebook.delegate = self
+        
+        lblUserName.text = ""
+        ivUserProfile.image = nil
     }
     
     //login Button Delegates
